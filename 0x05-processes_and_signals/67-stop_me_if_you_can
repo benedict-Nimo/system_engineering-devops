@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that sends a SIGTERM to the '7-highlander' process.
+# Send SIGTERM (which is the default signal for pkill) to the highlander process
+pkill -f "7-highlander"
