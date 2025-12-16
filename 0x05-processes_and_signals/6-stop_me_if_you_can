@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A Bash script that stops the '4-to_infinity_and_beyond' process without using kill or killall.
+PID_TO_STOP=$(pgrep -f "4-to_infinity_and_beyond")
+# The 'pkill' command sends a signal (SIGTERM by default) to processes based on name/pattern.
+pkill -f "4-to_infinity_and_beyond"
