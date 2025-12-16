@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# A Bash script that runs an infinite loop and prints a message when it receives a SIGTERM signal, instead of terminating.
+# Function to run when SIGTERM (signal 15) is received
+term_handler() {
+    echo "I am invincible!!!"
+}
+# Trap the SIGTERM signal and execute the term_handler function
+trap 'term_handler' SIGTERM
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
